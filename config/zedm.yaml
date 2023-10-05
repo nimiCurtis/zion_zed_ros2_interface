@@ -1,0 +1,16 @@
+# params/zedm.yaml
+# Parameters for Stereolabs ZED mini camera
+---
+/**:
+    ros__parameters:
+        general:
+            camera_model: "zedm"
+            camera_name: "zedm" # usually overwritten by launch file
+            grab_resolution: 'HD720' # The native camera grab resolution. 'HD2K', 'HD1080', 'HD720', 'VGA', 'AUTO'
+            grab_frame_rate: 15 # ZED SDK internal grabbing rate #Was 15
+            
+
+        depth:
+            min_depth: 0.15 # Min: 0.1, Max: 3.0 #Was 0.15
+            max_depth: 15. # Max: 20.0 was 15
+

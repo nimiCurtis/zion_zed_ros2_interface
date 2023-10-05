@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>zion_zed_ros2_interface</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="anis.shakkour399@gmail.com">anis</maintainer>
+  <license>TODO: License declaration</license>
+
+
+<!-- Declare ROS2 package build tool -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+<!-- Declares ROS2 package name that runs unit tests  on project -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+<!-- Declares ROS2 package name that is required at build time -->
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>rclcpp</build_depend>
+  <build_depend>rclpy</build_depend>
+  <build_depend>rclcpp_components</build_depend>
+  <build_depend>zed_components</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>zion_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>rcutils</build_depend>
+
+<!-- Declares ROS2 package name that the project need needs at execution-time -->
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>rclcpp_components</exec_depend>
+  <exec_depend>zed_components</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>zion_msgs</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>rcutils</exec_depend>
+	<exec_depend>xacro</exec_depend>
+
+<!-- Declars ROS2 package names that project needs as part of some build it exports -->
+  <build_export_depend>nav_msgs</build_export_depend>
+  <build_export_depend>rclcpp</build_export_depend>
+  <build_export_depend>rclpy</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>zion_msgs</build_export_depend>
+
+
+<!-- Declares ROS2 package name that is needed as part of some build interface it exports -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
