@@ -36,10 +36,7 @@ def generate_launch_description():
         }.items()
     )
 
-    # Define LaunchDescription variable
-    ld = LaunchDescription()
-
-    # Add nodes to LaunchDescription
-    ld.add_action(zed_wrapper_launch)
-
-    return ld
+    # return launch file
+    return LaunchDescription([
+        zed_wrapper_launch
+    ])

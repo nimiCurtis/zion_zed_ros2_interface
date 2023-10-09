@@ -100,6 +100,7 @@ install(TARGETS zed_wrapper
 
 install(DIRECTORY 
   config
+  rviz2
   urdf  
   launch
     #launch/zed_camera.launch.py

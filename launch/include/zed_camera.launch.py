@@ -57,7 +57,6 @@ def parse_array_param(param):
 
 
 def launch_setup(context, *args, **kwargs):
-    wrapper_dir = get_package_share_directory('zion_zed_ros2_interface')
 
     # Launch configuration variables
     svo_path = LaunchConfiguration('svo_path')
