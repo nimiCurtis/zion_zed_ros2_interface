@@ -11,6 +11,6 @@
             
 
         depth:
-            min_depth: 0.15 # Min: 0.1, Max: 3.0 #Was 0.15
+            min_depth: 0.1 # Min: 0.1, Max: 3.0 #Was 0.15
             max_depth: 15. # Max: 20.0 was 15
 
