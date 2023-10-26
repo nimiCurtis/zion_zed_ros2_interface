@@ -3,9 +3,10 @@
 <package format="3">
   <name>zion_zed_ros2_interface</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="anis.shakkour399@gmail.com">anis</maintainer>
-  <license>TODO: License declaration</license>
+  <description>zedm camera launching interface for zion exo-skeleton system</description>
+  <maintainer email="nimicu21@gmail.com">nimrod</maintainer>
+  <license>Apache License 2.0</license>
+	<url type="repository">https://github.com/nimiCurtis/zion_zed_ros2_interface.git</url>
 
 <!-- Declare ROS2 package build tool -->
   <buildtool_depend>ament_cmake</buildtool_depend>
