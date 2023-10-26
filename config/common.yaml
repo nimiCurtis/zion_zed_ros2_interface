@@ -1,45 +1,8 @@
-# # params/common.yaml
-# # Common parameters to Stereolabs ZED and ZED mini cameras
-# ---
-
-# # Dynamic parameters cannot have a namespace
-
-# general:
-#     gpu_id:                     -1
-#     verbose:                    false                           # Enable info message by the ZED SDK
-#     svo_compression:            2                               # `0`: LOSSLESS, `1`: AVCHD, `2`: HEVC
-#     self_calib:                 true                            # enable/disable self calibration at starting
-
-# video:
-#     img_downsample_factor:      0.5                             # Resample factor for images [0.01,1.0] The SDK works with native image sizes, but publishes rescaled image.
-
-# depth:
-#     quality:                    4                               # '0': NONE, '1': PERFORMANCE, '2': QUALITY, '3': ULTRA, '4': NEURAL
-#     depth_downsample_factor:    0.5                             # Resample factor for depth data matrices [0.01,1.0] The SDK works with native data sizes, but publishes rescaled matrices (depth map, point cloud, ...)
-
-# pos_tracking:
-#     save_area_memory_db_on_exit: false                          # save the "known visual features" map when the node is correctly closed to the path indicated by `area_memory_db_path`
-
-# mapping:
-
-# sensors:
-#     sensors_timestamp_sync:     false                           # Synchronize Sensors messages timestamp with latest received frame
-#     max_pub_rate:               400.                            # max frequency of publishing of sensors data. MAX: 400. - MIN: grab rate
-#     publish_imu_tf:             true                            # publish `IMU -> <cam_name>_left_camera_frame` TF
-
-# object_detection:
-#     object_tracking_enabled:    true                            # Enable/disable the tracking of the detected objects
-
-
-
-# config/common_yaml
+# params/common.yaml
 # Common parameters to Stereolabs ZED and ZED mini cameras
-#
-# Note: the parameter svo_file is passed as exe argumet
 ---
 /**:
     ros__parameters:
-
         general:
             svo_file: "" # usually overwritten by launch file
             svo_loop: false # Enable loop mode when using an SVO as input source

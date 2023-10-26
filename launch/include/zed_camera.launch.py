@@ -42,7 +42,7 @@ default_config_common = os.path.join(
 
 # URDF/xacro file to be loaded by the Robot State Publisher node
 default_xacro_path = os.path.join(
-    get_package_share_directory('zion_zed_ros2_interface'),
+    get_package_share_directory('zed_wrapper'),
     'urdf',
     'zed_descr.urdf.xacro'
 )
@@ -132,9 +132,7 @@ def launch_setup(context, *args, **kwargs):
         executable='zed_wrapper',
         name=node_name,
         output='screen',
-        # prefix=['xterm -e valgrind --tools=callgrind'],
-        # prefix=['xterm -e gdb -ex run --args'],
-        #prefix=['gdbserver localhost:3000'],
+
         parameters=[
             # YAML files
             config_common_path,  # Common parameters

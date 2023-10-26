@@ -77,34 +77,16 @@ include_directories(
 
 ###############################################################################
 # SOURCES
-set(ZED_WRAPPER_SRC
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/zed_wrapper.cpp
-)
+
 
 ###############################################################################
 # Bin and Install
 
-add_executable(zed_wrapper
-  ${ZED_WRAPPER_SRC}
-)
-ament_target_dependencies(zed_wrapper
-  rclcpp
-  rclcpp_components
-  zed_components
-)
-install(TARGETS zed_wrapper
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-  RUNTIME DESTINATION lib/${PROJECT_NAME}
-)
-
 install(DIRECTORY 
   config
   rviz2
-  urdf  
   launch
-    #launch/zed_camera.launch.py
-    
+
   DESTINATION
     share/${PROJECT_NAME}
 )
