@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>zion_zed_ros2_interface</name>
-  <version>0.0.0</version>
+  <version>0.1.0</version>
   <description>zedm camera launching interface for zion exo-skeleton system</description>
   <maintainer email="nimicu21@gmail.com">nimrod</maintainer>
   <license>Apache License 2.0</license>
