@@ -19,35 +19,10 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-
 #############################################
 # Dependencies
-
-
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(ZED 3 REQUIRED)
-find_package(CUDA REQUIRED)
-
-find_package(ament_cmake_auto REQUIRED)
-ament_auto_find_build_dependencies()
-
-#find_package(ament_python REQUIRED)
-#find_package(message_generation REQUIRED)
-#find_package(message_runtime REQUIRED)
-#find_package(sensor_msg REQUIRED)
-#find_package(std_msg REQUIRED)
-#find_package(zion_msgs REQUIRED)
-find_package(nav_msgs REQUIRED) 
-find_package(rclcpp REQUIRED) #ROS1->find_package(roscpp REQUIRED)
-find_package(rclpy REQUIRED)  #ROS1->find_package(rospy REQUIRED)
-find_package(rcutils REQUIRED)
-find_package(zed_components REQUIRED)
-
-
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -60,7 +35,6 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-
 ###############################################################################
 #Add all files in subdirectories of the project in
 # a dummy_target so qtcreator have access to all files
@@ -69,24 +43,16 @@ add_custom_target(all_${PROJECT_NAME}_files SOURCES ${all_files})
 
 ###############################################################################
 # INCLUDES and LIBS
-include_directories(
-  ${CUDA_INCLUDE_DIRS}
-  ${ZED_INCLUDE_DIRS}
-  ${CMAKE_CURRENT_SOURCE_DIR}/src
-)
 
 ###############################################################################
 # SOURCES
 
-
 ###############################################################################
 # Bin and Install
-
 install(DIRECTORY 
   config
   rviz2
   launch
-
   DESTINATION
     share/${PROJECT_NAME}
 )
