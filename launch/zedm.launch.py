@@ -19,13 +19,15 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
 
+    package_name = 'zion_zed_ros2_interface'
+    
     # Camera model (force value)
     camera_model = 'zedm'
 
     # ZED Wrapper node
     zed_wrapper_launch = IncludeLaunchDescription(
         launch_description_source=PythonLaunchDescriptionSource([
-            get_package_share_directory('zion_zed_ros2_interface'),
+            get_package_share_directory(package_name),
             '/launch/include/zed_camera.launch.py'
         ]),
         launch_arguments={

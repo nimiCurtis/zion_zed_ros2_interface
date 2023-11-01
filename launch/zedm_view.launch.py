@@ -20,9 +20,11 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     
+    package_name = 'zion_zed_ros2_interface'
+
     # Rviz2 params file
     config_rviz2 = os.path.join(
-        get_package_share_directory('zion_zed_ros2_interface'),
+        get_package_share_directory(package_name),
             'rviz2',
             'zedm_view.rviz')
     
@@ -37,5 +39,7 @@ def generate_launch_description():
     # return launch file
     return LaunchDescription([
         SetEnvironmentVariable(name='RCUTILS_COLORIZED_OUTPUT', value='1'),
+        SetEnvironmentVariable(name='RCUTILS_CONSOLE_OUTPUT_FORMAT', value='{time} [{name}] [{severity}] {message}'),
+
         launch_rviz
     ])
