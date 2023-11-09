@@ -62,7 +62,7 @@
             base_frame: "base_link" # usually overwritten by launch file
             map_frame: "map"
             odometry_frame: "odom"
-            area_memory_db_path: 'zed_area_memory.area'
+            area_memory_db_path: ''
             area_memory: true # Enable to detect loop closure
             depth_min_range: 0.0 # Set this value for removing fixed zones of the robot in the FoV of the camerafrom the visual odometry evaluation
             set_as_static: false # If 'true' the camera will be static and not move in the environment

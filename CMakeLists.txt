@@ -53,8 +53,7 @@ install(DIRECTORY
   config
   rviz2
   launch
-  DESTINATION
-    share/${PROJECT_NAME}
+  DESTINATION share/${PROJECT_NAME}
 )
 
 #ament_python_install_package(${PROJECT_NAME})
